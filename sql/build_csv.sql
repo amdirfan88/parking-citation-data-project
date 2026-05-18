@@ -1,7 +1,7 @@
 COPY (
     SELECT *
     FROM read_csv_auto(
-        'chunks/*.csv',
+        'data/chunks/*.csv',
         files_to_sniff = -1,
         types = {
             'ticket_number': VARCHAR,
@@ -18,5 +18,5 @@ TO 'parking_raw.csv'
         types = {'ticket_number': VARCHAR, 'fine_amount': DOUBLE}
     )
 )
-TO 'parking_raw.csv'
+TO 'data/parking_raw.csv'
 (FORMAT CSV, HEADER);
