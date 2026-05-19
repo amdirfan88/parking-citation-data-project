@@ -23,16 +23,11 @@ Planned analytical modeling includes:
 - Citation volume forecasting by agency
 - Revenue forecasting from parking citations
 - Temporal trend analysis by violation type
-- Spatiotemporal hotspot analysis
-- Violation pattern detection across time and location
-- Agency-level enforcement trend modeling
 
 Potential methods include:
 
 - Time-series forecasting
-- Statistical modeling
-- Machine learning models
-- Spatiotemporal analytics
+
 ---
 
 ## Dataset
@@ -80,7 +75,7 @@ The project currently keeps the following variables:
 | SQL Execution | DuckDB CLI |
 | Version Control | Git + GitHub |
 | Future Dashboarding | Power BI / Tableau |
-| Future GIS | ArcGIS |
+
 
 ---
 
