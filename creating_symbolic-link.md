@@ -87,7 +87,9 @@ New Item → Semantic Model → CSV
 8. Select:
    - **Create a Report**
    - or **Create a Semantic Model Only**
-In this step, you may be asked again to select the directory where you want to save.
+
+   In this step, you may be asked again to select the directory where you want to save.
+
 ---
 
 # Final Workflow

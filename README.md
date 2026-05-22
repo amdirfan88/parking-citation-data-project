@@ -83,19 +83,62 @@ The project currently keeps the following variables:
 
 ```text
 parking-citation-data-project/
-│
-├── sql/
-│   ├── clean_parking.sql
-│
-├── data/
-│   ├── parking_raw.parquet
-│   ├── parking_clean.parquet
-│
-├── docs/
-├── notebooks/
-├── src/
-├── tests/
-│
-├── README.md
+<!-- PROJECT_TREE_START -->
+```text
+.
+├── bash_cheatsheet.md
+├── config
+│   └── airflow.cfg
+├── creating_symbolic-link.md
+├── dags
+│   └── parking_pipeline.py
+├── data
+│   ├── data_exports -> /Users/taniazamansarna/OneDrive - Arizona State University/parking-citation-analytics
+│   ├── SELECT
+│   └── state_distribution.csv
+├── Data_Project.docx
+├── docker-compose.yaml
+├── docs_operational_analytics
+│   ├── dashboard_design.md
+│   ├── data_health_report.md
+│   ├── data_wrangling.md
+│   ├── etl_pipeline.md
+│   ├── findings_summary.md
+│   ├── gis_analysis.md
+│   ├── methodology.md
+│   ├── project_objective.md
+│   └── warehousing_schema.md
+├── logs
+│   ├── dag_id=parking_pipeline
+│   └── dag_processor
+├── main.py
+├── notebooks
+├── offset.txt
+├── plugins
+├── project_structure.txt
 ├── pyproject.toml
+├── README_tmp.md
+├── README.md
+├── scripts
+│   ├── download_chunks.sh
+│   └── update_tree.sh
+├── sql
+│   ├── build_csv.sql
+│   ├── build_parquet.sql
+│   ├── clean_parking.sql
+│   ├── dashboard_views.sql
+│   └── Schema.sql
+├── src
+│   ├── analysis
+│   ├── extract
+│   ├── load
+│   ├── ml
+│   └── transform
+├── system_requirements.md
+├── tests
+├── Things_to_do.md
 └── uv.lock
+
+20 directories, 33 files
+```
+<!-- PROJECT_TREE_END -->
