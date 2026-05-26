@@ -86,15 +86,23 @@ The project currently keeps the following variables:
 ```text
 parking-citation-data-project/
 ├── bash_cheatsheet.md
+├── bash_scripts
+│   ├── download_chunks.sh
+│   └── update_tree.sh
+├── code_cleaning
+│   ├── 1_ref_table_create.sql
+│   └── 2_violation_typo.py
 ├── config
 │   └── airflow.cfg
 ├── creating_symbolic-link.md
 ├── dags
 │   └── parking_pipeline.py
 ├── data
+│   ├── chunks
 │   ├── data_exports -> /Users/taniazamansarna/OneDrive - Arizona State University/parking-citation-analytics
-│   ├── SELECT
-│   └── state_distribution.csv
+│   ├── scored_results.csv
+│   ├── violation_reference_1.csv
+│   └── violation_reference.csv
 ├── Data_Project.docx
 ├── docker-compose.yaml
 ├── docs_operational_analytics
@@ -111,13 +119,15 @@ parking-citation-data-project/
 │   ├── dag_id=parking_pipeline
 │   └── dag_processor
 ├── main.py
+├── notebooks
+│   ├── Compare_dameraul.ipynb
+│   ├── Compare_LLM.ipynb
+│   ├── comparison_scores_LLM.csv
+│   └── comparison_scores.csv
 ├── project_structure.txt
 ├── pyproject.toml
 ├── README_tmp.md
 ├── README.md
-├── scripts
-│   ├── download_chunks.sh
-│   └── update_tree.sh
 ├── sql
 │   ├── build_csv.sql
 │   ├── build_parquet.sql
