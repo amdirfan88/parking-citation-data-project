@@ -1,5 +1,6 @@
 -- 1) drop rows before 2014 
 SELECT '--drop rows before 2014--';
+--
 COPY (
     SELECT *
     FROM read_parquet('data/parking_clean.parquet')
@@ -7,8 +8,8 @@ COPY (
 ) TO 'data/parking_clean.parquet' (FORMAT PARQUET);
 
 -- 2) drop rows after the date corresponds to recently added
-
 SELECT '--drop rows corresponds to future wrong date--';
+--
 COPY (
     SELECT *
     FROM read_parquet('data/parking_clean.parquet')
@@ -51,4 +52,11 @@ COPY (
     WHERE issue_time IS NOT NULL
       AND issue_time % 100 < 60
       AND FLOOR(issue_time / 100.0) < 24
+) TO 'data/parking_clean.parquet' (FORMAT PARQUET);
+
+-- Standardize fine_amount numeric type
+COPY (
+    SELECT
+    CAST(fine_amount AS DECIMAL(10,2))
+    FROM read_parquet('data/parking_clean.parquet');
 ) TO 'data/parking_clean.parquet' (FORMAT PARQUET);

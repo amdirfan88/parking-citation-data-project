@@ -81,11 +81,10 @@ The project currently keeps the following variables:
 
 ## Project Structure
 
-```text
-parking-citation-data-project/
+
 <!-- PROJECT_TREE_START -->
 ```text
-.
+parking-citation-data-project/
 ├── bash_cheatsheet.md
 ├── config
 │   └── airflow.cfg
@@ -112,9 +111,6 @@ parking-citation-data-project/
 │   ├── dag_id=parking_pipeline
 │   └── dag_processor
 ├── main.py
-├── notebooks
-├── offset.txt
-├── plugins
 ├── project_structure.txt
 ├── pyproject.toml
 ├── README_tmp.md
@@ -128,17 +124,8 @@ parking-citation-data-project/
 │   ├── clean_parking.sql
 │   ├── dashboard_views.sql
 │   └── Schema.sql
-├── src
-│   ├── analysis
-│   ├── extract
-│   ├── load
-│   ├── ml
-│   └── transform
 ├── system_requirements.md
-├── tests
 ├── Things_to_do.md
 └── uv.lock
-
-20 directories, 33 files
 ```
 <!-- PROJECT_TREE_END -->

@@ -1,2 +1,5 @@
 install:
 tree
+homebrew
+uv
+

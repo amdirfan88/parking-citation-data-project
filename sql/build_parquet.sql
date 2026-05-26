@@ -1,4 +1,4 @@
--- Merging chunks----
+-- Merging chunks to crete parking_raw.parquet----
 
 SELECT '-- merging chunks ----';
 
@@ -53,6 +53,7 @@ SELECT
     END AS validation_result
 FROM dupes;
 
+-- Creating database [optional]
 CREATE OR REPLACE TABLE parking_db AS
 SELECT *
 FROM read_parquet('data/parking_clean.parquet');

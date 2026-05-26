@@ -1,10 +1,10 @@
-mkdir -p chunks
+mkdir -p data/chunks
 
 LIMIT=50000
 OFFSET=$(cat offset.txt 2>/dev/null || echo 0)
 
 while true; do
-  FILE="chunks/parking_${OFFSET}.csv"
+  FILE="data/chunks/parking_${OFFSET}.csv"
   TEMP="${FILE}.tmp"
 
   if [ -s "$FILE" ]; then
