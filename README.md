@@ -13,6 +13,7 @@ The current scope of the project focuses on:
 - SQL-driven ETL workflows
 - Data warehousing preparation
 - Dashboard-ready aggregated datasets
+- Transformer-assisted semantic clustering to canonicalize violation fields
 
 ---
 
@@ -91,18 +92,35 @@ parking-citation-data-project/
 │   └── update_tree.sh
 ├── code_cleaning
 │   ├── 1_ref_table_create.sql
-│   └── 2_violation_typo.py
+│   ├── 2_ML_engineering_citation.py
+│   ├── 3_apply_transformer_semantic_cluster.sql
+│   ├── cleaning_utils.py
+│   └── README.md
 ├── config
 │   └── airflow.cfg
 ├── creating_symbolic-link.md
 ├── dags
 │   └── parking_pipeline.py
+├── dashboards
+│   └── powerbi
 ├── data
+│   ├── blank_entries_with_cluster.csv
 │   ├── chunks
+│   ├── dashboard_exports
 │   ├── data_exports -> /Users/taniazamansarna/OneDrive - Arizona State University/parking-citation-analytics
-│   ├── scored_results.csv
+│   ├── dim_agency.csv
+│   ├── dim_body_style.csv
+│   ├── dim_date.csv
+│   ├── dim_state.csv
+│   ├── dim_violation.csv
+│   ├── fact_citation.csv
+│   ├── low_freq_entries_with_cluster.csv
+│   ├── Transformer-assist_Semantic_Cluster.csv
 │   ├── violation_reference_1.csv
-│   └── violation_reference.csv
+│   ├── violation_reference_2.csv
+│   ├── violation_reference.csv
+│   └── zero_fine_entries_with_cluster.csv
+├── data_exports -> /Users/taniazamansarna/Library/CloudStorage/OneDrive-ArizonaStateUniversity/parking-citation-analytics
 ├── Data_Project.docx
 ├── docker-compose.yaml
 ├── docs_operational_analytics
@@ -115,11 +133,15 @@ parking-citation-data-project/
 │   ├── methodology.md
 │   ├── project_objective.md
 │   └── warehousing_schema.md
+├── fact-dim-table_n_dashboard
+│   ├── dashboard_views.sql
+│   └── schema.sql
 ├── logs
 │   ├── dag_id=parking_pipeline
 │   └── dag_processor
 ├── main.py
 ├── notebooks
+│   ├── Clustering.ipynb
 │   ├── Compare_dameraul.ipynb
 │   ├── Compare_LLM.ipynb
 │   ├── comparison_scores_LLM.csv
@@ -131,9 +153,7 @@ parking-citation-data-project/
 ├── sql
 │   ├── build_csv.sql
 │   ├── build_parquet.sql
-│   ├── clean_parking.sql
-│   ├── dashboard_views.sql
-│   └── Schema.sql
+│   └── clean_parking.sql
 ├── system_requirements.md
 ├── Things_to_do.md
 └── uv.lock
